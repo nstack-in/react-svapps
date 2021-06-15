@@ -1,0 +1,18 @@
+h1{
+  color: red;
+}
+.wrapper{
+  max-width: 960px;
+  margin:0 auto;
+}
+
+input{
+  padding: 5px;
+  margin: 10px 0px;
+  width: 285px;
+}
+
+button{
+  width:300px;
+  padding: 5px;
+}
