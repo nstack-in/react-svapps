@@ -5,21 +5,10 @@ import Footer from './components/footer';
 import Home from './page/home';
 import About from './page/about';
 import Contact from './page/contact';
+import Counter from './page/counter';
 
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-// function App() {
-//   return (
-//     <div className="wrapper">
-//       <Nav active="home"/>
-//       <div className="content">
-//         This will be my body
-//       </div>
-//       <Footer name="Syed Kumar"/>
-//     </div>
-//   );
-// }
 
 function App() {
   return (
@@ -34,6 +23,9 @@ function App() {
         <Switch>
           <Route path="/home">
             <Home />
+          </Route>
+          <Route path="/counter">
+            <Counter />
           </Route>
           <Route path="/contact">
             <Contact />
