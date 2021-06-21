@@ -9,6 +9,7 @@ import Counter from './page/counter';
 
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import NotFound from './page/not_found';
 
 function App() {
   return (
@@ -21,18 +22,12 @@ function App() {
       {/* Page */}
       <div className="content">
         <Switch>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/counter">
-            <Counter />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
+          <Route path="/" exact="true" component={Home} />
+          <Route path="/home" component={Home} />
+          <Route path="/counter" component={Counter} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/about" component={About} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </div>
       {/* Page */}
