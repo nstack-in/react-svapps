@@ -10,6 +10,7 @@ import Counter from './page/counter';
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NotFound from './page/not_found';
+import Todo from './page/todo';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/counter" component={Counter} />
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
+          <Route path="/todo" component={Todo} />
           <Route path="*" component={NotFound} />
         </Switch>
       </div>
