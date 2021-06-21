@@ -22,7 +22,7 @@ function App() {
       {/* Page */}
       <div className="content">
         <Switch>
-          <Route path="/" exact="true" component={Home} />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/home" component={Home} />
           <Route path="/counter" component={Counter} />
           <Route path="/contact" component={Contact} />

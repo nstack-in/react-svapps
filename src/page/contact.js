@@ -1,11 +1,12 @@
-import React, { createRef } from 'react';
-import { Container, Card, Button, Form } from 'react-bootstrap';
+import React, { createRef, useState } from 'react';
+import { Container, Card, Button, Form, Alert } from 'react-bootstrap';
 
 
 function Contact(props) {
   const name = createRef();
   const reason = createRef();
   const message = createRef();
+  const [errors, updateErrors] = useState([]);
 
   const submitForm = () => {
     const name_value = name.current.value;
@@ -16,7 +17,14 @@ function Contact(props) {
       reason: reason_value,
       message: message_value,
     };
-    console.log(val);
+    const error_responses = [];
+    if (val.name.length < 3) {
+      error_responses.push('Name must be greater than 3 letter');
+    }
+    if (val.message.length < 16) {
+      error_responses.push('Message must be greater than 16 letter');
+    }
+    updateErrors(error_responses);
   }
 
   return (
@@ -29,8 +37,12 @@ function Contact(props) {
           Contact Form
         </Card.Header>
         <Card.Body>
-          <Form>
 
+          {
+            errors.map(e => <Alert variant="danger" key="e">{e}</Alert>)
+          }
+
+          <Form>
             <Form.Group className="mb-3" controlId="name">
               <Form.Label>Full Name</Form.Label>
               <Form.Control type="text" ref={name} placeholder="Enter name" />
