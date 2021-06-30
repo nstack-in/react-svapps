@@ -15,6 +15,7 @@ function MyNav(props) {
           <Nav.Link as={Link} to="/todo">Todo</Nav.Link>
           <Nav.Link as={Link} to="/about" >About</Nav.Link>
           <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
+          <Nav.Link as={Link} to="/employee">Employee</Nav.Link>
           <Nav.Link as={Link} to="/covid">Covid</Nav.Link>
         </Nav>
       </Container>
