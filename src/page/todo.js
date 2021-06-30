@@ -1,23 +1,27 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import fetch from 'node-fetch';
 
 function Todo() {
   const [data, updateData] = useState([]);
 
   const callAPI = async function () {
+    console.log("API Called");
     const url = 'https://jsonplaceholder.typicode.com/todos/';
     const response = await fetch(url);
     const json = await response.json();
     updateData(json);
   }
 
+  useEffect(function () {
+    callAPI();
+  }, []);
+
   return (
     <div className="container">
-      <button onClick={callAPI}>Call API</button>
       {
         data.map(todo => {
-          if (todo['completed'] == true) {
+          if (todo['completed'] === true) {
             return (
               <p key={todo['id']}>
                 <s>
