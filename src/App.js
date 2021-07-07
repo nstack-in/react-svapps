@@ -1,18 +1,21 @@
 import './style.css';
-import Nav from './components/nav';
-import Footer from './components/footer';
+// import Nav from './components/nav';
+// import Footer from './components/footer';
+import { Nav, Footer } from './components';
 
-import Home from './page/home';
-import About from './page/about';
-import Contact from './page/contact';
-import Counter from './page/counter';
+// import Home from './page/home';
+// import About from './page/about';
+// import Contact from './page/contact';
+// import Counter from './page/counter';
+// import NotFound from './page/not_found';
+// import Todo from './page/todo';
+// import Covid from './page/covid';
+// import Employee from './page/employee';
+import { Home, About, Contact, Counter, NotFound, Todo, Covid, Employee } from './page';
 
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import NotFound from './page/not_found';
-import Todo from './page/todo';
-import Covid from './page/covid';
-import Employee from './page/employee';
+
 
 function App() {
   return (
