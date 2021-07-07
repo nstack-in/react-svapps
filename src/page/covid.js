@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetch from 'node-fetch';
-// import CovidCard from '../components/covid_card';
 import { CovidCard } from '../components';
-
 
 function Covid(props) {
   const endpoint = "https://api.covid19india.org/state_district_wise.json";
